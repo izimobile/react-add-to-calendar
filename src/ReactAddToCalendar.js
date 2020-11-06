@@ -35,6 +35,7 @@ export default class ReactAddToCalendar extends React.Component {
       isCrappyIE = true;
     }
 
+    // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({ isCrappyIE: isCrappyIE });
   }
 
