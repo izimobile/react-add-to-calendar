@@ -51,6 +51,7 @@ export default class ReactAddToCalendar extends React.Component {
   }
 
   handleDropdownLinkClick(e) {
+    const { closeOverlayFn = () => {} } = this.props;
     e.preventDefault();
     let url = e.currentTarget.getAttribute("href");
 
@@ -81,6 +82,7 @@ export default class ReactAddToCalendar extends React.Component {
     }
 
     this.toggleCalendarDropdown();
+    closeOverlayFn();
   }
 
   renderDropdown() {
