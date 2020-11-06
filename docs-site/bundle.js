@@ -25422,8 +25422,8 @@
 	  }
 
 	  _createClass(ReactAddToCalendar, [{
-	    key: "componentWillMount",
-	    value: function componentWillMount() {
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
 	      // polyfill for startsWith to fix IE bug
 	      if (!String.prototype.startsWith) {
 	        String.prototype.startsWith = function (searchString, position) {
