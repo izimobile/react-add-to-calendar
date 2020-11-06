@@ -51,7 +51,7 @@ export default class ReactAddToCalendar extends React.Component {
   }
 
   handleDropdownLinkClick(e) {
-    const { closeOverlayFn = () => {} } = this.props;
+    const { closeOverlayFn } = this.props;
     e.preventDefault();
     let url = e.currentTarget.getAttribute("href");
 
@@ -216,7 +216,8 @@ ReactAddToCalendar.propTypes = {
     endTime: PropTypes.string
   }).isRequired,
   listItems: PropTypes.arrayOf(PropTypes.object),
-  rootClass: PropTypes.string
+  rootClass: PropTypes.string,
+  closeOverlayFn: PropTypes.func
 };
 
 ReactAddToCalendar.defaultProps = {
@@ -244,5 +245,6 @@ ReactAddToCalendar.defaultProps = {
     { outlookcom: "Outlook.com" },
     { yahoo: "Yahoo" }
   ],
-  rootClass: "react-add-to-calendar"
+  rootClass: "react-add-to-calendar",
+  closeOverlayFn: () => {}
 };
