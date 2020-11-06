@@ -17,7 +17,7 @@ export default class ReactAddToCalendar extends React.Component {
     this.handleDropdownLinkClick = this.handleDropdownLinkClick.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     // polyfill for startsWith to fix IE bug
     if (!String.prototype.startsWith) {
       String.prototype.startsWith = function(searchString, position) {
